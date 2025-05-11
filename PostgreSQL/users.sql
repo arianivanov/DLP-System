@@ -1,0 +1,7 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    login VARCHAR(20) UNIQUE NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    role VARCHAR NOT NULL DEFAULT 'user',
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
